@@ -11,7 +11,6 @@ fn main() -> anyhow::Result<()> {
     while let Ok(packet) = cap.next_packet() {
         let timeval = packet.header.ts;
         println!("ts: {}.{}", timeval.tv_sec, timeval.tv_usec);
-        todo!()
     }
 
     // dbg!(main_device);
